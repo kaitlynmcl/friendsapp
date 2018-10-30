@@ -1,15 +1,16 @@
-var http = require("http");                             // INSTALLATION PACKAGES
+var path = require("path");                             // INSTALLATION PACKAGES
 var express = require('express')
-var fs = require("fs");
 
 var PORT = 8080;                                        // LOCAL PORT
+var app = express();
 
-function handleRequest(request, response) {             // HITS HTTP PATH
-    response.end("It Works!! Path Hit: " + request.url);
-  }
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-  var server = http.createServer(handleRequest);        // TEST PORT IS WORKING
-  server.listen(PORT, function() {
-  console.log("Server listening on: http://localhost:" + PORT);
+require("./routing/apiRoutes")(app);
+require("./routing/htmlRoutes")(app);
+                                                        // TEST PORT IS LISTENING
+  app.listen(PORT, function() {
+    console.log("App listening on PORT: " + PORT);
   });
-
+  
