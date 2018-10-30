@@ -1,0 +1,34 @@
+{
+  "name": "friendsapp",
+  "version": "1.0.0",
+  "description": "app for finding friends.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaitlynmcl/friendsapp.git"
+  },
+  "keywords": [
+    "friends",
+    "star",
+    "crossed",
+    "lovers",
+    "the",
+    "demise",
+    "of",
+    "humanity"
+  ],
+  "author": "kmm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaitlynmcl/friendsapp/issues"
+  },
+  "homepage": "https://github.com/kaitlynmcl/friendsapp#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}
