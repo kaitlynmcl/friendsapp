@@ -239,7 +239,7 @@
 
 
     <script type="text/javascript">
-        // CAPTURES ONCLICK FOR SUBMIT BUTTON 
+                                                                // CAPTURES ONCLICK FOR SUBMIT BUTTON 
         $(document).ready(function () {
             $("#submit").on("click", function () {
                 console.log("this is working");
@@ -278,21 +278,21 @@
                     };                                              // GRABS CURRENT URL OF WEBSITE
                     var currentURL = window.location.origin;
 
-                    // AJAX POSTS DATA TO FRIENDS API
-                    // THEN GRABS THE RESULT FROM THE AJAX POST TO DISPLAY BEST MATCH AND PHOTO 
+                                                                    // AJAX POSTS DATA TO FRIENDS API
+                                                                    // THEN GRABS THE RESULT FROM THE AJAX POST TO DISPLAY BEST MATCH AND PHOTO 
                     $.post(currentURL + "/api/friends", newFriend, function (data) {
                         $("#matchName").text(data.name);
                         console.log(data.name)
                         $("#matchPic").attr("src", data.photo);
                         console.log(data.photo)
-                         $("#myModal").modal()                     // DISPLAYS MODAL WITH BEST MATCH
+                         $("#myModal").modal()                     // DISPLAYS MODAL WITH BEST MATCH, MAY NOT BE REQUIRED?
                     });
                     
                 } else {
                     console.log("you need to select something");
                     alert("People are under a lot of stress, Bradley. Please complete all questions before you submit.")
                 }
-                                                                    // DISPLAYS MODAL WITH BEST MATCH
+                                                                    
                 console.log("you selected the best match!");
                 $('.modal').modal();
 
