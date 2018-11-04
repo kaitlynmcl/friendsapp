@@ -4,22 +4,24 @@
 <head>
     <title>Kaitlyn McLaughlin</title>
 
-    <!-- LINK TO BOOTSTRAP -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-
     <!-- LINK TO CSS -->
-    <link rel="stylesheet" type="text/css" href="../assets/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+    <!-- JQUERYY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <!-- MINIFIED CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
 
     <!-- LINK TO FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
         crossorigin="anonymous">
-    <!-- LINK TO GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR|Questrial" rel="stylesheet">
 
-    <!-- LINK TO JAVASCRIPT THAT DOESN'T EXIST YET -->
-    <script src="main.js"></script>
+
 
 </head>
 
@@ -30,179 +32,288 @@
                 <h1><i class="fab fa-think-peaks"></i><i class="fab fa-think-peaks"></i></h1>
                 <h2>Friend Finder:<br>
                     Survey Selection </h2>
-                <div id="friends"> <img src="../assets/images/fren2.jpg"></div>
+                <div id="friends"> <img src="assets/images/fren2.jpg"></div>
 
                 <hr>
 
                 <div class="input-field col s6">
-                    <h4>Name (Required)<br><br>
-                        <i class="fa fa-user-circle" aria-hidden="true"></i>
-                        <input type="text" class="validate" placeholder="name here" id="userName">
-                    </h4>
-                </div><br>
-                <div class="input-field col s6">
-                    <h4>Link to Photo Image (Required)<br><br>
-                        <i class="fa fa-user-circle" aria-hidden="true"></i>
-                        <input type="text" class="validate" placeholder="photo link here" id="userPhoto">
-                    </h4>
-                </div>
+                    <i class="fa fa-user-circle" aria-hidden="true"></i> Name (required) <br>
+                    <input id="name" type="text" class="validate" required><br><br>
 
-                <hr>
+                    <i class="fa fa-user-circle" aria-hidden="true"></i> Photo Link (required)
+                    <label class='active' for="name"></label><br>
+                    <input id="photo" type="text" class="validate" required>
 
-                <div class="input-field col s12">
-                    <h5>1. You occasionally enjoy a damn fine cup of coffee. <i class="fas fa-coffee"></i><br><br>
-                        <select id="question1">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                    </h5>
-                    </select>
-                </div>
 
-                <br>
+                    <hr>
+                    <div class="survey">
+                        <div class="input-field col s12">
+                            <h5>1. You occasionally enjoy a damn fine cup of coffee. <i class="fas fa-coffee"></i><br><br>
+                                <select data-placeholder="" class="browser-default" id="q1">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                            </h5>
+                            </select>
+                        </div>
 
-                <div class="input-field col s12">
-                    <h5>2. James was always cool. <i class="fas fa-motorcycle"></i><br><br>
-                        <select id="question1">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                    </h5>
-                    </select>
-                </div>
+                        <br>
 
-                <br>
+                        <div class="input-field col s12">
+                            <h5>2. James was always cool. <i class="fas fa-motorcycle"></i><br><br>
+                                <select data-placeholder="" class="browser-default" id="q2">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                            </h5>
+                            </select>
+                        </div>
 
-                <div class="input-field col s12">
-                    <h5>3. The owls are not what they seem. <i class="fas fa-tree"></i><br><br>
-                        <select id="question1">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                    </h5>
-                    </select>
-                </div>
+                        <br>
 
-                <br>
+                        <div class="input-field col s12">
+                            <h5>3. The owls are not what they seem. <i class="fas fa-tree"></i><br><br>
+                                <select data-placeholder="" class="browser-default" id="q3">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                            </h5>
+                            </select>
+                        </div>
 
-                <div class="input-field col s12">
-                    <h5>4. Every day, once a day, give yourself a present. <i class="fa fa-gift" aria-hidden="true"></i></i><br><br>
-                        <select id="question1">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                    </h5>
-                    </select>
-                </div>
+                        <br>
 
-                <br>
+                        <div class="input-field col s12">
+                            <h5>4. Every day, once a day, give yourself a present. <i class="fa fa-gift" aria-hidden="true"></i></i><br><br>
+                                <select data-placeholder="" class="browser-default" id="q4">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                            </h5>
+                            </select>
+                        </div>
 
-                <div class="input-field col s12">
-                    <h5>5. I'll see you again in 25 years. <i class="far fa-clock"></i><br><br>
-                        <select id="question1">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                    </h5>
-                    </select>
-                </div>
+                        <br>
 
-                <br>
+                        <div class="input-field col s12">
+                            <h5>5. I'll see you again in 25 years. <i class="far fa-clock"></i><br><br>
+                                <select data-placeholder="" class="browser-default" id="q5">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                            </h5>
+                            </select>
+                        </div>
 
-                <div class="input-field col s12">
-                    <h5>6. Who should I call? Mr. Strawberry? <br>No. I don't think I'll call Mr. Strawberry. <br>I don't think he's taking calls. <i class="fas fa-phone"></i><br><br>
-                        <select id="question1">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                    </h5>
-                    </select>
-                </div>
+                        <br>
 
-                <br>
+                        <div class="input-field col s12">
+                            <h5>6. You are about to witness a front 3/4 view of two adults sharing a tender moment. <i
+                                    class="fas fa-kiss"></i><br><br>
+                                <select data-placeholder="" class="browser-default" id="q6">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                            </h5>
+                            </select>
+                        </div>
 
-                <div class="input-field col s12">
-                    <h5>7. Black as midnight on a moonless night. <i class="far fa-moon"></i> <br><br>
-                        <select id="question1">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                    </h5>
-                    </select>
-                </div>
+                        <br>
 
-                <br>
+                        <div class="input-field col s12">
+                            <h5>7. Black as midnight on a moonless night. <i class="far fa-moon"></i> <br><br>
+                                <select data-placeholder="" class="browser-default" id="q7">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                            </h5>
+                            </select>
+                        </div>
 
-                <div class="input-field col s12">
-                    <h5>8. This must be a place where pies go when they die. <i class="fas fa-chart-pie"></i><br><br>
-                        <select id="question1">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                    </h5>
-                    </select>
-                </div>
+                        <br>
 
-                <br>
+                        <div class="input-field col s12">
+                            <h5>8. This must be a place where pies go when they die. <i class="fas fa-chart-pie"></i><br><br>
+                                <select data-placeholder="" class="browser-default" id="q8">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                            </h5>
+                            </select>
+                        </div>
 
-                <div class="input-field col s12">
-                    <h5>9. I am the FBI. <i class="fas fa-thumbs-up"></i><br><br>
-                        <select id="question1">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                    </h5>
-                    </select>
-                </div>
+                        <br>
 
-                <br>
+                        <div class="input-field col s12">
+                            <h5>9. I am the FBI. <i class="fas fa-thumbs-up"></i><br><br>
+                                <select data-placeholder="" class="browser-default" id="q9">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                            </h5>
+                            </select>
+                        </div>
 
-                <div class="input-field col s12">
-                    <h5>10. <i>Through the darkness of future's past,<br>
-                        the magician longs to see,<br>
-                        one chants out between two worlds,<br> 
-                        "Fire... walk with me."</i> <i class="fas fa-fire"></i><br><br>
-                        <select id="question1">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                    </h5>
-                    </select>
-                </div>
+                        <br>
+
+                        <div class="input-field col s12">
+                            <h5>10. <i>Through the darkness of future's past,<br>
+                                    the magician longs to see,<br>
+                                    one chants out between two worlds,<br>
+                                    "Fire... walk with me."</i> <i class="fas fa-fire"></i><br><br>
+                                <select data-placeholder="" class="browser-default" id="q10">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                            </h5>
+                            </select>
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-danger" id="submit">Submit</button>
+                    </div>
+                    <br><br>
+                    <div class="links">
+                        <h5><a href="api/friends">API Friends Link</a> | <a href="https://github.com/kaitlynmcl/friendsapp">Github
+                                Repo</a>
+                            | <a href="home.html"><i class="fas fa-home"></i></a></h5>
+                    </div>
 
             </center>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div id="#myModal">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <center>
+                        <h5 class="modal-title" id="exampleModalLongTitle"><i>Where we're from, the birds sing a pretty
+                                song.</i> <br><br>MEET YOUR NEW FREN: </h5>
+                    </center>
+                </div>
+                <div class="modal-body">
+                    <center>
+                        <h1 id="matchName"></h1>
+                        <img id="matchPic" src="" alt="No Image" width=450px height=350>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script type="text/javascript">
+        // CAPTURES ONCLICK FOR SUBMIT BUTTON 
+        $(document).ready(function () {
+            $("#submit").on("click", function () {
+                console.log("this is working");
+
+                function validateForm() {                       // VALIDATES FORM 
+                    var isValid = true;
+                    $(".validate").each(function () {
+                        if ($(this).val() === "") {
+                            isValid = false;
+                        }
+                    });
+
+                    $(".browser-default").each(function () {
+                        if ($(this).val() === "") {
+                            isValid = false;
+                        }
+                    });
+                    return isValid;
+                }                                               // IF FORM IS VALIDATED (TRUE), CREATE NEW FRIEND
+                if (validateForm() == true) {
+                    var newFriend = {
+                        name: $('#name').val().trim(),
+                        photo: $('#photo').val().trim(),
+                        scores: [
+                            $('#q1').val(),
+                            $('#q2').val(),
+                            $('#q3').val(),
+                            $('#q4').val(),
+                            $('#q5').val(),
+                            $('#q6').val(),
+                            $('#q7').val(),
+                            $('#q8').val(),
+                            $('#q9').val(),
+                            $('#q10').val(),
+                        ]
+                    };                                              // GRABS CURRENT URL OF WEBSITE
+                    var currentURL = window.location.origin;
+
+                    // AJAX POSTS DATA TO FRIENDS API
+                    // THEN GRABS THE RESULT FROM THE AJAX POST TO DISPLAY BEST MATCH AND PHOTO 
+                    $.post(currentURL + "/api/friends", newFriend, function (data) {
+                        $("#matchName").text(data.name);
+                        console.log(data.name)
+                        $("#matchPic").attr("src", data.photo);
+                        console.log(data.photo)
+                         $("#myModal").modal()                     // DISPLAYS MODAL WITH BEST MATCH
+                    });
+                    
+                } else {
+                    console.log("you need to select something");
+                    alert("People are under a lot of stress, Bradley. Please complete all questions before you submit.")
+                }
+                                                                    // DISPLAYS MODAL WITH BEST MATCH
+                console.log("you selected the best match!");
+                $('.modal').modal();
+
+                $('#name').val("");                                 // CLEARS OUT FORM AFTER SUBMIT
+                $('#photo').val("");
+                $('#q1').val("");
+                $('#q2').val("");
+                $('#q3').val("");
+                $('#q4').val("");
+                $('#q5').val("");
+                $('#q6').val("");
+                $('#q7').val("");
+                $('#q8').val("");
+                $('#q9').val("");
+                $('#q10').val("");
+
+            });
+            return false;
+        });
+
+    </script>
 </body>
 
 </html>

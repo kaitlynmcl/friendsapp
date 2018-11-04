@@ -28,7 +28,9 @@
   },
   "homepage": "https://github.com/kaitlynmcl/friendsapp#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "materialize-css": "^1.0.0",
     "path": "^0.12.7"
   }
 }

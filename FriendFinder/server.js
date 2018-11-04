@@ -1,12 +1,15 @@
 var path = require("path");                             // INSTALLATION PACKAGES
-var express = require('express')
+var express = require("express");
+var bodyParser = require("body-parser");
 
 var PORT = 8080;                                        // LOCAL PORT
 var app = express();
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.static("./app/public"));
+app.use(bodyParser.json());
 
+                                                        // REQUIRES ROUTES
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
                                                         // TEST PORT IS LISTENING
