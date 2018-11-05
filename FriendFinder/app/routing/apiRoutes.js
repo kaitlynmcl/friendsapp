@@ -40,7 +40,7 @@ module.exports = function (app) {
         }
 
         friendsData.push(bestMatch);                          //PUSHES bestMatch TO DATABASE/API LINKS
-        res.json(newFriend);                                //ESTABLISHES NEW FRIEND
+        res.json(newFriend);                                   //ESTABLISHES NEW FRIEND
 
     })
 
